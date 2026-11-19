@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="ContractManager.Source.Pages.MP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+  <title>
+    <asp:ContentPlaceholder runat="server" ID="title"></asp:ContentPlaceholder>
+  </title>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="MP" runat="server">
+    <header classo="p-3 mb-3 border-bottom"></header>
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <nav class="navbar navbar-default">
+        </nav>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/Source/Pages/index.aspx" class="nav-link px-2 link-secondary">Inicio</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Solicitud</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Revisión</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Catálogo prov.</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Reporte de contratos</a></li>
+        </ul>
+        <div>
+          <asp:Label runat="server" ID="lblUser" />
+        </div>
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class=" dropdown-menu text-small" aria-labelledby="dropdownuser">
+              <li>
+                <asp:Button Text="Nuevo" runat="server" class="dropdown-item" />
+              </li>
+              <li>
+                <asp:Button Text="Config" runat="server" class="dropdown-item" />
+              </li>
+              <li>
+                <asp:Button Text="Cerrar sesión" class="dropdown-item" runat="server" OnClick="logout" />
+              </li>
+            </ul>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <asp:ContentPlaceHolder ID="body" runat="server">
+
+      </asp:ContentPlaceHolder>
+
+    </div>
+
+  </form>
+</body>
+</html>
