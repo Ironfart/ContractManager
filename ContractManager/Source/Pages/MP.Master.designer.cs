@@ -31,6 +31,42 @@ namespace ContractManager.Source.Pages {
     protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
     /// <summary>
+    /// Control pnlRequest.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Panel pnlRequest;
+
+    /// <summary>
+    /// Control pnlRevision.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Panel pnlRevision;
+
+    /// <summary>
+    /// Control pnlCatalog.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Panel pnlCatalog;
+
+    /// <summary>
+    /// Control pnlReport.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Panel pnlReport;
+
+    /// <summary>
     /// Control lblUser.
     /// </summary>
     /// <remarks>

@@ -17,16 +17,24 @@
 <body>
   <form id="MP" runat="server">
     <header classo="p-3 mb-3 border-bottom"></header>
-    <div class="container">
+    <div class="container border-bottom">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <nav class="navbar navbar-default">
         </nav>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="/Source/Pages/index.aspx" class="nav-link px-2 link-secondary">Inicio</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Solicitud</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Revisión</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Catálogo prov.</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Reporte de contratos</a></li>
+          <asp:Panel runat="server" ID="pnlRequest">
+            <li><a href="/Source/Pages/ContractRequest.aspx" class="nav-link px-2 link-dark">Solicitud</a></li>
+          </asp:Panel>
+          <asp:Panel runat="server" ID="pnlRevision">
+            <li><a href="/Source/Pages/revision.aspx" class="nav-link px-2 link-dark">Revisión</a></li>
+          </asp:Panel>
+          <asp:Panel runat="server" ID="pnlCatalog">
+            <li><a href="/Source/Pages/providerCatalog.aspx" class="nav-link px-2 link-dark">Catálogo prov.</a></li>
+          </asp:Panel>
+          <asp:Panel runat="server" ID="pnlReport">
+            <li><a href="/Source/Pages/contractReport.aspx" class="nav-link px-2 link-dark">Reporte de contratos</a></li>
+          </asp:Panel>
         </ul>
         <div>
           <asp:Label runat="server" ID="lblUser" />

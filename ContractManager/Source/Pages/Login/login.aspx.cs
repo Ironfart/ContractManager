@@ -34,31 +34,6 @@ namespace ContractManager {
         lblMessage.Text = "Ingresa una contraseña";
         return;
       }
-
-      
-      //System.Diagnostics.Debug.WriteLine("data " + dataReader.Read());
-      
-      /*
-      using (this.conn) {
-        using (SqlCommand cmd = new SqlCommand("SP_UserAuth", this.conn)) {
-          cmd.CommandType = System.Data.CommandType.StoredProcedure;
-          cmd.Parameters.Add("@P_Username", SqlDbType.VarChar).Value = txtUser.Text;
-          cmd.Parameters.Add("@P_Password", SqlDbType.VarChar).Value = txtPassword.Text;
-
-          conn.Open();
-          SqlDataReader dataReader = cmd.ExecuteReader();
-
-          if (dataReader.Read()) {
-            Session["username"] = dataReader["username"].ToString();
-
-            Response.Redirect("/Source/Pages/index.aspx");
-          } else {
-            lblMessage.Text = "Usuario o contraseña incorrectos"; 
-          }
-          conn.Close();
-        }
-      }*/
-
       
       username = txtUser.Text;
       password = txtPassword.Text;

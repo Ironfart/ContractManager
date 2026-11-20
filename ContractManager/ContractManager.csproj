@@ -67,14 +67,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Source\Pages\contractReport.aspx" />
+    <Content Include="Source\Pages\ContractRequest.aspx" />
     <Content Include="Source\Pages\index.aspx" />
     <Content Include="Source\Pages\Login\login.aspx" />
     <Content Include="MainScreen.aspx" />
+    <Content Include="Source\Pages\providerCatalog.aspx" />
+    <Content Include="Source\Pages\revision.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataAccess.cs" />
-    <Compile Include="Data\User.cs" />
+    <Compile Include="Source\Pages\contractReport.aspx.cs">
+      <DependentUpon>contractReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Pages\contractReport.aspx.designer.cs">
+      <DependentUpon>contractReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Pages\ContractRequest.aspx.cs">
+      <DependentUpon>ContractRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Pages\ContractRequest.aspx.designer.cs">
+      <DependentUpon>ContractRequest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Source\Pages\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +120,20 @@
     </Compile>
     <Compile Include="Source\Pages\MP.Master.designer.cs">
       <DependentUpon>MP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Pages\providerCatalog.aspx.cs">
+      <DependentUpon>providerCatalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Pages\providerCatalog.aspx.designer.cs">
+      <DependentUpon>providerCatalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Pages\revision.aspx.cs">
+      <DependentUpon>revision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Pages\revision.aspx.designer.cs">
+      <DependentUpon>revision.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

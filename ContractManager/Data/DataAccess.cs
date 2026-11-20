@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -39,8 +40,8 @@ namespace ContractManager.Data {
       return (result, msg);
     }
 
-    public (User _result, string _msg) GetProfile(string spName, SqlParameter[] sqlParams) {
-      User result = new User();
+    public DataTable GetProfile(string spName, SqlParameter[] sqlParams)  {
+      DataTable response = new DataTable();
       string msg = "";
 
       using (SqlConnection conn = new SqlConnection(this.connectionString)) {
@@ -49,16 +50,22 @@ namespace ContractManager.Data {
           cmd.Parameters.AddRange(sqlParams);
 
           try {
-            conn.Open();
+            conn.OpenAsync();
+            cmd.ExecuteScalar();
 
-            result = (User)cmd.ExecuteScalar();
+            var adatper = new SqlDataAdapter(cmd);
+
+            adatper.Fill(response);
+
+            return response;
+
           } catch (Exception ex) {
             msg = ex.Message;
           }
         }
       }
 
-      return (result, msg);
+      return response;
     }
   }
 }
