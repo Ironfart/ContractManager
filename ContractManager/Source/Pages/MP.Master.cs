@@ -70,8 +70,15 @@ namespace ContractManager.Source.Pages {
     }
 
     protected void logout(object sender, EventArgs e) {
-      Session.Remove("username");
-      Response.Redirect("/Source/Pages/Login/login.aspx");
+      Session.Clear();
+      Session.RemoveAll();
+      Session.Abandon();
+
+      // Si usas Forms Authentication, descomenta esta línea:
+      // System.Web.Security.FormsAuthentication.SignOut();
+
+      Response.Redirect(ResolveUrl("~/Source/Pages/Login/login.aspx"), false);
+      Context.ApplicationInstance.CompleteRequest();
     }
   }
 }
