@@ -6,11 +6,12 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
   <div id="form1" runat="server">
+    <asp:HiddenField ID="hfIdContrato" runat="server" Value="0" />
     <div class="container py-4">
 
       <div class="card shadow-sm mb-4">
         <div class="card-header bg-primary text-white">
-          <strong>Datos del Contrato</strong>d
+          <strong>Datos del Contrato</strong>
         </div>
         <div class="card-body">
           <div class="row g-3">
@@ -127,6 +128,29 @@
                 </asp:TemplateField>
                 <asp:BoundField DataField="begin_date" HeaderText="Inicio" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-CssClass="text-nowrap" />
                 <asp:BoundField DataField="end_date" HeaderText="Fin" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-CssClass="text-nowrap" />
+                <asp:TemplateField HeaderText="Estatus" ItemStyle-CssClass="text-nowrap">
+                  <ItemTemplate>
+                    <span class='<%# ObtenerClaseBadge(Eval("Estatus").ToString()) %>'>
+                      <%# Eval("Estatus") %>
+                    </span>
+                  </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Motivo Rechazo">
+                  <ItemTemplate>
+                    <%# string.IsNullOrWhiteSpace(Eval("reject_reason")?.ToString()) ? "-" : Eval("reject_reason") %>
+                  </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Acciones" ItemStyle-CssClass="text-nowrap">
+                  <ItemTemplate>
+                    <asp:Button ID="btnEditar" runat="server" Text="Editar"
+                      CssClass="btn btn-sm btn-warning"
+                      CommandName="Editar"
+                      CommandArgument='<%# Eval("id") %>'
+                      CausesValidation="false" />
+                    <asp:Label ID="lblBloqueado" runat="server" Text="Bloqueado"
+                      CssClass="badge bg-secondary" Visible="false" />
+                  </ItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="PDF" ItemStyle-CssClass="text-nowrap">
                   <ItemTemplate>
                     <a href='<%# ResolveUrl(Eval("file_path").ToString()) %>' target="_blank"

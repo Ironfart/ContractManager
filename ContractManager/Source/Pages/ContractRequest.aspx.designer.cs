@@ -22,6 +22,15 @@ namespace ContractManager.Source.Pages {
     protected global::System.Web.UI.HtmlControls.HtmlGenericControl form1;
 
     /// <summary>
+    /// Control hfIdContrato.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HiddenField hfIdContrato;
+
+    /// <summary>
     /// Control ddlProveedor.
     /// </summary>
     /// <remarks>
