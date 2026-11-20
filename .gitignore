@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# uploads
+Uploads/Contratos/*
+!Uploads/Contratos/.gitkeep
