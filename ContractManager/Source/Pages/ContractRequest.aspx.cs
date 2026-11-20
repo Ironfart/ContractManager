@@ -104,7 +104,6 @@ namespace ContractManager.Source.Pages {
 
           cmd.Parameters.Add("@p_idProvider", SqlDbType.Int).Value = idProveedor;
           cmd.Parameters.Add("@p_jobDescription", SqlDbType.VarChar, 500).Value = descripcion;
-          cmd.Parameters.Add("@p_contractCost", SqlDbType.Decimal).Value = monto;
 
           var paramMonto = cmd.Parameters.Add("@p_contractCost", SqlDbType.Decimal);
           paramMonto.Precision = 18;

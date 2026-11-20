@@ -118,8 +118,8 @@
               EmptyDataText="No hay solicitudes de contrato registradas.">
               <Columns>
                 <asp:BoundField DataField="id" HeaderText="Folio" ItemStyle-CssClass="text-nowrap" />
-                <asp:BoundField DataField="provider" HeaderText="Proveedor" />
-                <asp:BoundField DataField="jobDescription" HeaderText="Descripción del Trabajo" />
+                <asp:BoundField DataField="Proveedor" HeaderText="Proveedor" />
+                <asp:BoundField DataField="job_description" HeaderText="Descripción del Trabajo" />
                 <asp:TemplateField HeaderText="Monto" ItemStyle-CssClass="text-nowrap">
                   <ItemTemplate>
                     <%# Eval("contract_cost", "{0:N2}") %> <%# Eval("currency") %>
